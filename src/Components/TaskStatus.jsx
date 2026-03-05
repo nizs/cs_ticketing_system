@@ -1,32 +1,27 @@
-const TaskStatus = () => {
+const TaskStatus = ({ ticket }) => {
+    const { title } = ticket;
+    if (!ticket) {
+        return (
+            <div className="p-6 rounded-xl shadow bg-white">
+                <h2 className="text-xl font-semibold mb-4">Task Status</h2>
+                <p className="text-gray-500">No ticket selected</p>
+            </div>
+        );
+    }
     return (
-      <div className="bg-white p-6 rounded-xl shadow">
-  
-        <h2 className="text-xl font-semibold mb-4">
-          Task Status
-        </h2>
-  
-        <div className="space-y-3">
-  
-          <div className="flex justify-between">
-            <span>Open Tasks</span>
-            <span className="font-semibold">12</span>
-          </div>
-  
-          <div className="flex justify-between">
-            <span>In Progress</span>
-            <span className="font-semibold">5</span>
-          </div>
-  
-          <div className="flex justify-between">
-            <span>Pending</span>
-            <span className="font-semibold">3</span>
-          </div>
-  
+        <div>
+            <h2 className="text-xl mb-4 font-bold text-[#34485A]">Task Status</h2>
+            <div className="bg-white p-6 rounded-xl shadow">
+
+                <h3 className="text-xl font-semibold mb-4">
+                    {title}
+                </h3>
+                <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Responsive</button>
+
+
+            </div>
         </div>
-  
-      </div>
     );
-  };
-  
-  export default TaskStatus;
+};
+
+export default TaskStatus;

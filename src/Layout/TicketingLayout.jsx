@@ -6,6 +6,7 @@ import TaskStatus from "../Components/TaskStatus";
 
 const TicketingLayout = () => {
   const [tickets, setTickets] = useState([]);
+  const [clickedTicket, setClickedTicket] = useState(null);
 
   const loadTickets = async () => {
     try {
@@ -25,6 +26,7 @@ const TicketingLayout = () => {
 
   const handleTicketClick = (ticket) => {
     console.log("Ticket clicked:", ticket);
+    setClickedTicket(ticket);
   };
 
   return (
@@ -41,7 +43,9 @@ const TicketingLayout = () => {
 
         {/* Right Column */}
         <div className="flex flex-col gap-6">
-          <TaskStatus />
+          <TaskStatus
+            ticket={clickedTicket}
+          />
           <ResolvedTasks />
         </div>
 
