@@ -3,7 +3,7 @@ import TicketCard from "./TicketCard";
 
 const CustomerTickets = ({ tickets, handleTicketClick }) => {
     return (
-        <div className="bg-white p-6 rounded-xl shadow">
+        <div className="p-4 md:p-6 rounded-xl ">
 
             <h2 className="text-xl font-semibold mb-4">
                 Customer Tickets

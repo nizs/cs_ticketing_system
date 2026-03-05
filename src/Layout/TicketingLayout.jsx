@@ -28,22 +28,24 @@ const TicketingLayout = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
+    <div className="bg-base-200">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 p-0">
 
-      {/* Left Column */}
-      <div className="lg:col-span-2">
-        <CustomerTickets
-          tickets={tickets}
-          handleTicketClick={handleTicketClick}
-        />
+        {/* Left Column */}
+        <div className="lg:col-span-2">
+          <CustomerTickets
+            tickets={tickets}
+            handleTicketClick={handleTicketClick}
+          />
+        </div>
+
+        {/* Right Column */}
+        <div className="flex flex-col gap-6">
+          <TaskStatus />
+          <ResolvedTasks />
+        </div>
+
       </div>
-
-      {/* Right Column */}
-      <div className="flex flex-col gap-6">
-        <TaskStatus />
-        <ResolvedTasks />
-      </div>
-
     </div>
   );
 };

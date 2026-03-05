@@ -3,7 +3,7 @@ import { MdDateRange } from "react-icons/md";
 const TicketCard = ({ ticket, handleTicketClick }) => {
     const { id, title, description, customer, priority, status, createdAt } = ticket;
     return (
-        <div onClick={() => handleTicketClick(ticket)} className="border hover:border-purple-500 rounded-lg p-4 cursor-pointer hover:shadow-md hover:scale-[1.02] transition duration-200 bg-white">
+        <div onClick={() => handleTicketClick(ticket)} className="hover:border-purple-500 rounded-lg p-4 cursor-pointer hover:shadow-md hover:scale-[1.02] transition duration-200 bg-white">
 
             <div className='flex justify-between items-center'>
                 <h3 className="font-semibold text-lg">
