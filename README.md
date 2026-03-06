@@ -1,7 +1,6 @@
 # 🎫 Customer Support Zone – CS Ticket System
 
 🔗 **Live Demo:** https://cs-ticket-system-peach.vercel.app
-🔗 **Repository:** https://github.com/nizs/cs_ticketing_system
 
 ---
 
