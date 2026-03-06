@@ -4,7 +4,7 @@
         "title": "Login page not working",
         "description": "Customer unable to login with correct credentials.",
         "customer": "John Doe",
-        "priority": "High",
+        "priority": "HIGH PRIORITY",
         "status": "open",
         "createdAt": "2026-03-01"
     },
@@ -13,7 +13,7 @@
         "title": "Payment failed",
         "description": "Payment gateway returns error after checkout.",
         "customer": "Sarah Ahmed",
-        "priority": "High",
+        "priority": "HIGH PRIORITY",
         "status": "open",
         "createdAt": "2026-03-02"
     },
@@ -22,7 +22,7 @@
         "title": "Account verification delay",
         "description": "User not receiving verification email.",
         "customer": "Michael Lee",
-        "priority": "Medium",
+        "priority": "MEDIUM PRIORITY",
         "status": "open",
         "createdAt": "2026-03-03"
     },
@@ -31,7 +31,7 @@
         "title": "Profile update issue",
         "description": "Changes to profile information are not saved.",
         "customer": "Emily Brown",
-        "priority": "Low",
+        "priority": "LOW PRIORITY",
         "status": "open",
         "createdAt": "2026-03-03"
     },
@@ -40,7 +40,7 @@
         "title": "App crashing on dashboard",
         "description": "Application crashes when opening dashboard.",
         "customer": "David Wilson",
-        "priority": "High",
+        "priority": "HIGH PRIORITY",
         "status": "open",
         "createdAt": "2026-03-04"
     },
@@ -49,7 +49,7 @@
         "title": "Notification not received",
         "description": "User not receiving push notifications.",
         "customer": "Ayesha Khan",
-        "priority": "Medium",
+        "priority": "MEDIUM PRIORITY",
         "status": "open",
         "createdAt": "2026-03-04"
     },
@@ -58,7 +58,7 @@
         "title": "Incorrect billing amount",
         "description": "Customer charged wrong amount in invoice.",
         "customer": "Robert Garcia",
-        "priority": "High",
+        "priority": "HIGH PRIORITY",
         "status": "open",
         "createdAt": "2026-03-05"
     },
@@ -67,7 +67,7 @@
         "title": "Slow page loading",
         "description": "Product page takes too long to load.",
         "customer": "Fatima Noor",
-        "priority": "Low",
+        "priority": "LOW PRIORITY",
         "status": "open",
         "createdAt": "2026-03-05"
     },
@@ -76,7 +76,7 @@
         "title": "Search function broken",
         "description": "Search returns empty results incorrectly.",
         "customer": "Daniel Kim",
-        "priority": "Medium",
+        "priority": "MEDIUM PRIORITY",
         "status": "open",
         "createdAt": "2026-03-05"
     },
@@ -85,7 +85,7 @@
         "title": "File upload failed",
         "description": "User unable to upload documents.",
         "customer": "Nusrat Jahan",
-        "priority": "High",
+        "priority": "HIGH PRIORITY",
         "status": "open",
         "createdAt": "2026-03-05"
     }

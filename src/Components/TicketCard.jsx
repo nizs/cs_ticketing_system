@@ -10,9 +10,17 @@ const TicketCard = ({ ticket, handleTicketClick }) => {
                 <h3 className="font-semibold text-lg">
                     {title}
                 </h3>
-                <div className="flex items-center gap-1 bg-[#B9F8CF] px-2 py-1 rounded-full">
-                    <span><FaCircle className="text-[#02A53B]" /></span>
-                    <p className="text-[#0B5E06] font-medium">{status}</p>
+                <div
+                    className={`flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium
+                            ${status === "open"
+                            ? "bg-green-100 text-green-700"
+                            : status === "in-progress"
+                                ? "bg-yellow-100 text-yellow-700"
+                                : "bg-green-100 text-green-700"
+                        }`}
+                >
+                    <span><FaCircle className="text-xs" /></span>
+                    <span>{status}</span>
                 </div>
             </div>
 
@@ -27,9 +35,9 @@ const TicketCard = ({ ticket, handleTicketClick }) => {
                     <span className="text-sm text-gray-500 px-2 py-1 rounded">
                         #{id}
                     </span>
-                    <span className={`text-sm px-2 py-1 rounded ${priority === "High"
+                    <span className={`text-xs px-2 py-1 rounded ${priority === "HIGH PRIORITY"
                         ? "bg-red-100 text-red-700"
-                        : priority === "Medium"
+                        : priority === "MEDIUM PRIORITY"
                             ? "bg-yellow-100 text-yellow-700"
                             : "bg-green-100 text-green-700"
                         }`}>

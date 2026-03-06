@@ -1,24 +1,27 @@
-const TaskStatus = ({ ticket }) => {
-    const { title } = ticket;
-    if (!ticket) {
+
+
+const TaskStatus = ({ tickets }) => {
+    if (tickets.length === 0) {
         return (
-            <div className="p-6 rounded-xl shadow bg-white">
-                <h2 className="text-xl font-semibold mb-4">Task Status</h2>
-                <p className="text-gray-500">No ticket selected</p>
+            <div>
+                <h2 className="text-xl mb-4 font-bold text-[#34485A]">Task Status</h2>
+                <div className="p-4 rounded-lg bg-white hover:shadow-md transition">
+                    <p className="text-gray-500">Select a ticket to add to task status</p>
+                </div>
             </div>
         );
     }
     return (
         <div>
             <h2 className="text-xl mb-4 font-bold text-[#34485A]">Task Status</h2>
-            <div className="bg-white p-6 rounded-xl shadow">
-
-                <h3 className="text-xl font-semibold mb-4">
-                    {title}
-                </h3>
-                <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Responsive</button>
-
-
+            <div className="flex flex-col gap4 bg-base-200 gap-6">
+                {tickets.map(ticket => <div
+                    key={ticket.id}
+                    className=" p-4 rounded-lg bg-white hover:shadow-md transition"
+                >
+                    <h3 className="font-semibold">{ticket.title}</h3>
+                    <button className="w-full bg-[#02A53B] text-lg mt-4 text-white btn btn-xs sm:btn-sm md:btn-md">Complete</button>
+                </div>)}
             </div>
         </div>
     );
