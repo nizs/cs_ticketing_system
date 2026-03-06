@@ -1,7 +1,7 @@
 import React from 'react';
 import vector1 from '../assets/vector1.png';
 import vector2 from '../assets/vector2.png';
-const Banner = ({inProgressCount}) => {
+const Banner = ({inProgressCount, resolvedTickets}) => {
     return (
         <div className=" bg-base-200 py-12 md:px-3">
             <div className='max-w-7xl mx-auto'>
@@ -44,7 +44,7 @@ const Banner = ({inProgressCount}) => {
 
                         {/* Content */}
                         <p>Resolved</p>
-                        <h2 className="font-bold text-5xl">0</h2>
+                        <h2 className="font-bold text-5xl">{resolvedTickets.length}</h2>
                     </div>
                 </div>
             </div>

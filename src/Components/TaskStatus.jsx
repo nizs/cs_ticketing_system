@@ -1,6 +1,6 @@
 
 
-const TaskStatus = ({ tickets }) => {
+const TaskStatus = ({ tickets, handleCompleteTicket }) => {
     if (tickets.length === 0) {
         return (
             <div>
@@ -20,7 +20,7 @@ const TaskStatus = ({ tickets }) => {
                     className=" p-4 rounded-lg bg-white hover:shadow-md transition"
                 >
                     <h3 className="font-semibold">{ticket.title}</h3>
-                    <button className="w-full bg-[#02A53B] text-lg mt-4 text-white btn btn-xs sm:btn-sm md:btn-md">Complete</button>
+                    <button onClick={() => handleCompleteTicket(ticket)} className="w-full bg-[#02A53B] text-lg mt-4 text-white btn btn-xs sm:btn-sm md:btn-md">Complete</button>
                 </div>)}
             </div>
         </div>

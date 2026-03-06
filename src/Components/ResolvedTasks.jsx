@@ -1,32 +1,27 @@
-const ResolvedTasks = () => {
+const ResolvedTasks = ({ resolveds }) => {
+  if (resolveds.length === 0) {
     return (
-      <div className="bg-white p-6 rounded-xl shadow">
-  
-        <h2 className="text-xl font-semibold mb-4">
-          Resolved Tasks
-        </h2>
-  
-        <div className="space-y-3">
-  
-          <div className="flex justify-between">
-            <span>Today</span>
-            <span className="font-semibold">4</span>
-          </div>
-  
-          <div className="flex justify-between">
-            <span>This Week</span>
-            <span className="font-semibold">18</span>
-          </div>
-  
-          <div className="flex justify-between">
-            <span>Total</span>
-            <span className="font-semibold">124</span>
-          </div>
-  
+      <div>
+        <h2 className="text-xl mb-4 font-bold text-[#34485A]">Resolved Task</h2>
+        <div className="p-4 rounded-lg bg-white hover:shadow-md transition">
+          <p className="text-gray-500">No Resolved Task Yet</p>
         </div>
-  
       </div>
     );
-  };
-  
-  export default ResolvedTasks;
+  }
+  return (
+    <div>
+      <h2 className="text-xl mb-4 font-bold text-[#34485A]">Resolved Task</h2>
+      <div className="flex flex-col gap4 bg-base-200 gap-6">
+        {resolveds.map(resolved => <div
+          key={resolved.id}
+          className=" p-4 rounded-lg bg-[#E0E7FF] hover:shadow-md transition"
+        >
+          <h3 className="font-semibold">{resolved.title}</h3>
+        </div>)}
+      </div>
+    </div>
+  );
+};
+
+export default ResolvedTasks;

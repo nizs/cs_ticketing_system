@@ -10,6 +10,7 @@ function App() {
 
   const [tickets, setTickets] = useState([]);
   const [inProgressTickets, setInProgressTickets] = useState([]);
+  const [resolvedTickets, setResolvedTickets] = useState([]);
 
   // load tickets from public JSON
   const loadTickets = async () => {
@@ -64,6 +65,38 @@ function App() {
     }
   };
 
+  // =============================
+  // Complete Ticket Handler
+  // =============================
+  const handleCompleteTicket = (completedTicket) => {
+
+    // remove from inProgress
+    const remainingTickets = inProgressTickets.filter(
+      ticket => ticket.id !== completedTicket.id
+    );
+
+    setInProgressTickets(remainingTickets);
+
+    // add to resolved list
+    setResolvedTickets([completedTicket, ...resolvedTickets]);
+
+    // change ticket status back to open
+    const updatedTickets = tickets.map(ticket =>
+      ticket.id === completedTicket.id
+        ? { ...ticket, status: "open" }
+        : ticket
+    );
+
+    setTickets(updatedTickets);
+
+    // toast message
+    toast.success(
+      <span>
+        <span className="font-bold">{completedTicket.title}</span> resolved successfully
+      </span>
+    );
+  };
+
   return (
     <>
       <ToastContainer />
@@ -72,6 +105,7 @@ function App() {
       {/* Banner */}
       <Banner
         inProgressCount={inProgressTickets}
+        resolvedTickets={resolvedTickets}
         resolvedCount={0}
       />
 
@@ -89,8 +123,12 @@ function App() {
 
           {/* Right Column */}
           <div className="flex flex-col gap-6">
-            <TaskStatus tickets={inProgressTickets} />
-            <ResolvedTasks />
+            <TaskStatus
+              tickets={inProgressTickets}
+              handleCompleteTicket={handleCompleteTicket} />
+            <ResolvedTasks
+              resolveds={resolvedTickets}
+            />
           </div>
 
         </div>
