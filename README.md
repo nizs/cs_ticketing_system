@@ -9,7 +9,7 @@
 Customer Support Zone is a React-based ticket management system that helps track customer support tickets and their progress.
 Users can move tickets into **In Progress**, complete them, and track resolved tasks.
 
-The project follows a clean UI design and implements dynamic state management using **React hooks**.
+The project follows a clean UI design and implements dynamic state management using **React UseState**.
 
 ---
 
